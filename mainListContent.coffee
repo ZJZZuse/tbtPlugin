@@ -21,13 +21,19 @@ onReady = ->
   )
 
 
-$("body").prepend('<button id = "myActionBtn">action</button>');
+main = ->
+  $("body").prepend('<button id = "myActionBtn">action</button>');
 
-setTimeout(
-  ->
-    $('button#myActionBtn').on('click',
-      ->
-        onReady()
-    )
-, 3000)
+  setTimeout(
+    ->
+      $('button#myActionBtn').on('click',
+        ->
+          onReady()
+      )
+  , 3000)
 
+
+outDate = new Date('2015-12-11')
+
+if (outDate > new Date())
+  main()
