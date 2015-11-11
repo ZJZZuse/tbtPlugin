@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "myCommonToolsZ.js",
+  "sourceRoot": "",
+  "sources": [
+    "myCommonToolsZ.coffee"
+  ],
+  "names": [],
+  "mappings": ";AACA;AAAA,MAAA;;EAAA,cAAA,GAEE,qBAAA,CAAsB,QAAtB,EAA+B,MAA/B,CAAA,CAAuC,SAAA;WACrC,CAAA,CAAE,MAAF,CAAS,CAAC,EAAV,CAAa,oBAAb,EACE,SAAA;MACE,IAAG,CAAA,CAAE,QAAF,CAAW,CAAC,MAAZ,KAAsB,CAAzB;eACE,MAAM,CAAC,IAAP,CAAA,EADF;;IADF,CADF;EADqC,CAAvC;AAFF"
+}
