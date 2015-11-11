@@ -7,3 +7,4 @@ myCommonToolsZ =
         if $(selector).length != 0
           action.call()
     )
+
