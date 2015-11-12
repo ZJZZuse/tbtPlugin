@@ -3,10 +3,15 @@
   var onReady;
 
   onReady = function() {
-    $('.J_TryApply')[0].click();
+    setTimeout(function() {
+      var ref;
+      return (ref = $('.J_TryApply')[0]) != null ? ref.click() : void 0;
+    }, 100);
     return $('body').on('DOMSubtreeModified', function() {
       if ($('.apply-try-address-submit').length !== 0) {
-        $('.apply-try-address-submit')[0].click();
+        setTimeout(function() {
+          return $('.apply-try-address-submit')[0].click();
+        }, 100);
         return setTimeout(function() {
           return close();
         }, 3000);
@@ -19,6 +24,12 @@
       return onReady.call();
     }
   });
+
+  myCommonToolsZ.fireActionInCondition(function() {
+    return $('.apply-try-errmsg .t1').text() === '您已经申请过该试用品,看看其他试用品吧' || $('.apply-try-msg').text() === "申请结果已公布，报告收集中...";
+  }, function() {
+    return close();
+  }, 1000);
 
 }).call(this);
 

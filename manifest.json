@@ -13,6 +13,11 @@
   //"theme": {},
   //"app": {},
   // 根据需要提供
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
   "content_scripts": [
 //    {
 //      "matches": [
@@ -50,6 +55,12 @@
     }
   ],
   //  "key": "publicKey",
-  "permissions": [],
+  "permissions": [
+//    "background",
+    "http://*/*",
+    "https://*/*"
+
+
+  ],
   "requirements": {}
 }  

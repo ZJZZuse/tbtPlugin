@@ -3,12 +3,14 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/myCommonToolsZ.js" />
+        <item url="file://$PROJECT_DIR$/background.js" />
         <item url="file://$PROJECT_DIR$/certainItemContent.js" />
         <item url="file://$PROJECT_DIR$/mainListContent.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/myCommonToolsZ.js" />
+      <root url="file://$PROJECT_DIR$/background.js" />
       <root url="file://$PROJECT_DIR$/certainItemContent.js" />
       <root url="file://$PROJECT_DIR$/mainListContent.js" />
     </CLASSES>

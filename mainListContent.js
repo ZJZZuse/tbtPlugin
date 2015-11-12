@@ -18,12 +18,13 @@
     return async.mapLimit(effectiveUrls, 1, function(url, callback) {
       var w;
       w = open(url);
-      return w.onunload = function() {
+      return myCommonToolsZ.fireActionByCusCondition(function() {
+        return w.closed;
+      }, function() {
         return callback(null, url);
-      };
+      });
     }, function(err, result) {
-      console.log('done', result);
-      return $("body").prepend(result + 'down');
+      return $("body").prepend("done,count is " + result.length);
     });
   };
 
