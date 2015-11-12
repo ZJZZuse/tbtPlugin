@@ -3,40 +3,36 @@ onReady = ->
     $('.J_TryApply')[0]?.click()
   , 100)
 
-  $('body').on('DOMSubtreeModified',
+  myCommonToolsZ.fireActionByCusCondition(
     ->
-      if $('.apply-try-address-submit').length != 0
-
-        setTimeout(->
-          $('.apply-try-address-submit')[0].click()
-
-        , 100)
-
-        setTimeout(
-          ->
-#            $(document.body).data('callbackT')()
-#            chrome.extension.sendRequest({a: 'a'})
-
-            close()
-        , 3000
-        )
+      $('.apply-try-address-submit').length != 0
+  ,
+  ->
+    $('.apply-try-address-submit')[0].click()
+    setTimeout(
+      ->
+        close()
+    , 3000
+    )
   )
 
 
-$('body').on('DOMSubtreeModified',
+myCommonToolsZ.fireActionByCusCondition(
   ->
-    if $('.J_TryApply').length != 0
-      onReady.call()
+    $('.J_TryApply').length != 0
+,
+->
+  onReady.call()
 )
+
 
 myCommonToolsZ.fireActionInCondition(
   ->
-
     $('.apply-try-errmsg .t1').text() == '您已经申请过该试用品,看看其他试用品吧' or $('.apply-try-msg').text() == "申请结果已公布，报告收集中..."
 ,
-  ->
+->
 #    chrome.extension.sendRequest({a: 'a'})
-    close()
+  close()
 ,
   1000
 )

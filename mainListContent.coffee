@@ -10,24 +10,24 @@ onReady = ->
 
 
   async.mapLimit(effectiveUrls, 1,
-    (url, callback)->
-      w = open(url)
+  (url, callback)->
+    w = open(url)
 
-      #      callBackT = ->
-      #        callback(null, url)
+    #      callBackT = ->
+    #        callback(null, url)
 
 
-      #      $(w.document.body).data('callbackT', ->
-      #        callback(null, url)
-      #      )
+    #      $(w.document.body).data('callbackT', ->
+    #        callback(null, url)
+    #      )
 
-      myCommonToolsZ.fireActionByCusCondition(
-        ->
-          w.closed
-      ,
-        ->
-          callback(null, url)
-      )
+    myCommonToolsZ.fireActionByCusCondition(
+      ->
+        w.closed
+    ,
+    ->
+      callback(null, url)
+    )
 
 #      setTimeout(
 #        ->
@@ -55,8 +55,8 @@ main = ->
   setTimeout(
     ->
       $('button#myActionBtn').on('click',
-        ->
-          onReady()
+      ->
+        onReady()
       )
   , 3000)
 
